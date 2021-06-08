@@ -1,8 +1,8 @@
 #
-# Play 2.5 Runner Image
-# Docker image with tools and scripts installed to support the running of a Play Framework 2.5 server
-# Expects build artifacts mounted at /home/runner/artifacts
-#
+# Play 2.8 Runner Image
+# Docker image with tools and scripts installed to support the running of a Play Framework 2.8 server
+# Expects build artifacts mounted at /home/runner/artifacts OR details to fetch from S3 to
+# be provided.
 
 FROM openjdk:11.0.11-jre-buster
 LABEL org.opencontainers.image.authors="Agile Digital <info@agiledigital.com.au>"
