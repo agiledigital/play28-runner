@@ -6,7 +6,7 @@
 
 FROM openjdk:11.0.11-jre-buster
 LABEL org.opencontainers.image.authors="Agile Digital <info@agiledigital.com.au>"
-LABEL Description=" Docker image with tools and scripts installed to support the running of a Play Framework 2.5 server" Vendor="Agile Digital" Version="0.1"
+LABEL Description=" Docker image with tools and scripts installed to support the running of a Play Framework 2.8 server" Vendor="Agile Digital" Version="0.1"
 
 ENV HOME /home/runner
 WORKDIR /home/runner
