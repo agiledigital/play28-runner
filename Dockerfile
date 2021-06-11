@@ -32,6 +32,7 @@ RUN chmod +x /home/runner/tools/run.sh
 # Ensure we are in the the passwd file
 RUN chmod g+w /etc/passwd
 RUN chgrp -Rf root /home/runner && chmod -Rf g+w /home/runner
+RUN chown -Rf runner:root /home/runner
 ENV RUNNER_USER runner
 
 RUN cat /etc/passwd && echo "done"
