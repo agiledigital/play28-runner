@@ -4,7 +4,7 @@
 # Expects build artifacts mounted at /home/runner/artifacts OR details to fetch from S3 to
 # be provided.
 
-FROM openjdk:11.0.15-jre-buster
+FROM openjdk:11.0.15-jre-buster@sha256:36c248ef3e04f473185c7a05034148a4395cbf90a3169c548c03612f36064f8e
 LABEL org.opencontainers.image.authors="Agile Digital <info@agiledigital.com.au>"
 LABEL Description=" Docker image with tools and scripts installed to support the running of a Play Framework 2.8 server" Vendor="Agile Digital" Version="0.1"
 
