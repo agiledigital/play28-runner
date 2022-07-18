@@ -4,7 +4,7 @@
 # Expects build artifacts mounted at /home/runner/artifacts OR details to fetch from S3 to
 # be provided.
 
-FROM openjdk:11.0.15-jre-buster
+FROM eclipse-temurin:11.0.15_10-jre-alpine
 LABEL org.opencontainers.image.authors="Agile Digital <info@agiledigital.com.au>"
 LABEL Description=" Docker image with tools and scripts installed to support the running of a Play Framework 2.8 server" Vendor="Agile Digital" Version="0.1"
 
@@ -12,8 +12,7 @@ ENV HOME /home/runner
 WORKDIR /home/runner
 
 # Install libsodium so that applications can use the kalium crypto library.
-RUN apt-get update \
-    && apt-get -y install --no-install-recommends git bash tzdata libsodium-dev python python-pip \
+RUN apk add --update git bash tzdata libsodium-dev python3 py3-pip \
     && rm -rf /var/lib/apt/lists/*
 
 # AWS cli
