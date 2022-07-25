@@ -4,7 +4,7 @@
 # Expects build artifacts mounted at /home/runner/artifacts OR details to fetch from S3 to
 # be provided.
 
-FROM eclipse-temurin:11.0.15_10-jre-alpine
+FROM eclipse-temurin:11.0.15_10-jre-alpine@sha256:dcd7942517ac38c259af1a9af0601ae138f173616c2f0c08cdc0294027e59c16
 LABEL org.opencontainers.image.authors="Agile Digital <info@agiledigital.com.au>"
 LABEL Description=" Docker image with tools and scripts installed to support the running of a Play Framework 2.8 server" Vendor="Agile Digital" Version="0.1"
 
