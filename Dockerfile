@@ -12,7 +12,8 @@ ENV HOME /home/runner
 WORKDIR /home/runner
 
 # Install libsodium so that applications can use the kalium crypto library.
-RUN apk add --update git bash tzdata libsodium-dev python3 py3-pip \
+# expat=2.4.9-r0 is installed explicitly for an upstream CVE, remove this when a fix come through
+RUN apk add --update expat=2.4.9-r0  git bash tzdata libsodium-dev python3 py3-pip \
     && rm -rf /var/lib/apt/lists/*
 
 # AWS cli
